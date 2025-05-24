@@ -9,6 +9,7 @@ import HomeScreen from "./screens/home";
 import SignUpScreen from "./screens/auth/SignUp";
 import UserDetailsScreen from "./screens/user-details"; // fixed typo
 import ExploreScreen from "./screens/explore";
+import MatchesScreen from "./screens/matches";
 
 // Prevent auto-hide of splash screen before fonts are ready
 SplashScreen.preventAutoHideAsync();
@@ -45,13 +46,14 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Explore"
+          initialRouteName="Matches"
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Signup" component={SignUpScreen} />
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="UserDetails" component={UserDetailsScreen} />
           <Stack.Screen name="Explore" component={ExploreScreen} />
+          <Stack.Screen name="Matches" component={MatchesScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>
